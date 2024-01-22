@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-
 export const Header = styled.header`
     background: #01FFFF;
     width: 100vw;
@@ -121,15 +120,197 @@ export const Header = styled.header`
                 }
             }
         }
+    }
+`;
 
-        .btnHeader {
-            border: none;
-            background: #FE9F39;
-            padding: 10px 35px;
-            font-weight: 500;
-            font-size: 1rem;
+export const SectionMain = styled.section`
+    width: 100vw;
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+    background: #01FFFF;
+
+    .descriptionMain{
+        width: 40vw;
+        height: 88vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .spanWelcomeMain {
+            width: 200px;
+            height: 40px;
+            background: #ECC194;
             border-radius: 25px;
-            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .8rem;
+            font-weight: 500;
+
+            .iconeDescriptionMain {
+                margin-left: 5px;
+                width: 15px;
+            }
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 5% 0;
+        }
+
+        .descriptionH1Main {
+          font-weight: 500;
+          margin-bottom: 8%;
+          line-height: 1.8rem;
+          font-size: .9rem;
+          width: 90%;
+        }
+
+        .containerBtnMain {
+            margin-bottom: 8%;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+
+            .BtnMainVideo {
+                background: none;
+                width: 50%;
+                border: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+                cursor: pointer;
+
+                .Circulo {
+                    background: #fff;
+                    color: #FCA039;
+                    width: 35px;
+                    height: 35px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.5rem;
+                    border-radius: 50%;
+                    padding-left: 3px;
+                    margin-right: 10px;
+                }
+
+                &:hover {
+                    .Circulo {
+                        background: #FCA039;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .containerCustomerReview {
+            display: flex;
+
+            .containerImgsHeader {
+                display: flex;
+                position: relative;
+                width: 22%;
+                
+                .containerCirculo {
+                    width: 40px;
+                    height: 40px;
+                    overflow: hidden;
+                    background: red;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                        img {
+                            min-height: 40px;
+                            min-width: 40px;
+                        }
+                }
+
+                .containerCirculo:nth-child(1) {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 9;
+                }
+
+                .containerCirculo:nth-child(2) {
+                    position: absolute;
+                    top: 0;
+                    left: 32px;
+                    z-index: 99;
+                }
+
+                .containerCirculo:nth-child(3) {
+                    position: absolute;
+                    top: 0;
+                    left: 64px;
+                    z-index: 9;
+                }
+            }
+
+            .infoCurstomerReview {
+                
+                p:nth-child(1) {
+                    font-weight: 600;
+                    font-size: .9rem;
+                }
+
+                p:nth-child(2) {
+                    font-size: .8rem;
+                    margin-top: 2px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+
+                    span:nth-child(1) {
+                        color: #FCA039;
+                    }
+
+                    span:nth-child(2) {
+                        font-weight: 600;
+                    }
+
+                    span:nth-child(3) {
+                        color: #666;
+                        font-size: .6rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .imgSectionMain{
+        width: 40vw;
+        height: 88vh;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        position: relative;
+        
+        img {
+            width: 80%;
+        }
+
+        .container1ComponenteInfo {
+            position: absolute;
+            top: 27%;
+            left: 15%;
+        }
+
+        .container2ComponenteInfo {
+            position: absolute;
+            top: 67%;
+            left: 12%;
+        }
+
+        .container3ComponenteInfo {
+            position: absolute;
+            top: 54%;
+            left: 68%;
         }
     }
 `;
