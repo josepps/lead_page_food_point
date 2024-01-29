@@ -9,7 +9,8 @@ import arrozCFrango from "./imgs/arrozComFrango.jpg";
 import hamburguer from "./imgs/hamburguer.jpg";
 import salada from "./imgs/salada.png";
 import InfoImgMain from "./components/infoImgMain";
-import { Header, SectionMain } from "./App.style";
+import CardComida from "./components/cardComida";
+import { Header, SectionMain, SectionOrganicFood } from "./App.style";
 
 function App() {
   return (
@@ -102,6 +103,10 @@ function App() {
           </div>
         </div>
       </SectionMain>
+      <SectionOrganicFood>
+        <CardComida src={salada} />
+        <CardComida src={arrozCFrango} />
+      </SectionOrganicFood>
     </>
   )
 }

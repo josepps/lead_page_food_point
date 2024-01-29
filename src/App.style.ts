@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Header = styled.header`
-    background: #01FFFF;
     width: 100vw;
     height: 12vh;
     display: flex;
@@ -85,7 +84,6 @@ export const Header = styled.header`
         .inputHeader {
             width: 180px;
             height: 40px; 
-            background: red;
             display: block;
             border-radius: 25px;
             position: relative;
@@ -128,7 +126,6 @@ export const SectionMain = styled.section`
     height: 88vh;
     display: flex;
     justify-content: center;
-    background: #01FFFF;
 
     .descriptionMain{
         width: 40vw;
@@ -218,7 +215,6 @@ export const SectionMain = styled.section`
                     width: 40px;
                     height: 40px;
                     overflow: hidden;
-                    background: red;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
@@ -313,4 +309,14 @@ export const SectionMain = styled.section`
             left: 68%;
         }
     }
+`;
+
+export const SectionOrganicFood = styled.section`
+    width: 100vw;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 100px;
 `;
