@@ -320,3 +320,72 @@ export const SectionOrganicFood = styled.section`
     gap: 100px;
     margin-bottom: 100px;
 `;
+
+export const SectionDeliver = styled.section`
+    height: 80vh;
+    display: flex;
+
+    .imagensDeliver {
+        height: 100%;
+        width: 45%;
+        position: relative;
+
+        img:nth-child(1) {
+            width: 338px;
+            height: 324px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 99;
+        }
+
+        img:nth-child(2) {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            top: 25px;
+            right: 240px;
+            z-index: 9;
+        }
+
+        img:nth-child(3) {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            top: 175px;
+            right: 125px;
+            z-index: 100;
+        }
+    }
+
+    .infoDeliver {
+        height: 100%;
+        width: 55%;
+        padding: 2%;
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .paragrafoInfoDeliver {
+            width: 62%;
+            line-height: 26px;
+            margin-bottom: 55px;
+        }
+
+        .containerBtnDeliver {
+            
+            :nth-child(1) {
+                margin-right: 16px;
+            }
+        }
+
+        .ContainerBtnDeliver2 {
+            padding-top: 60px;
+            display: flex;
+            gap: 25px;
+        }
+
+    }
+`;
