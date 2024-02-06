@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const CardComidaStyle = styled.div`
     background: #F0E4D4;
     width: 450px;
+    height: 245px;
     border-radius: 20px;
     padding: 25px 40px;
     position: relative;

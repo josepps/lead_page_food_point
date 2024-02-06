@@ -9,15 +9,51 @@ import pessoa3 from "./imgs/pessoa3.jpg";
 import arrozCFrango from "./imgs/arrozComFrango.jpg";
 import hamburguer from "./imgs/hamburguer.jpg";
 import salada from "./imgs/salada.png";
+import salada2 from "./imgs/salada2.jpg";
+import salada3 from "./imgs/salada3.jpg";
+import salada4 from "./imgs/salada4.jpg";
 import pizza1 from "./imgs/pizza1.jpg";
 import pizza2 from "./imgs/pizza2.jpg";
 import pizza3 from "./imgs/pizza3.jpg";
+import pizza4 from "./imgs/pizza4.jpg";
+import drink from "./imgs/drink.jpg";
+import drink2 from "./imgs/drink2.jpg";
+import drink3 from "./imgs/drink3.jpg";
+import drink4 from "./imgs/drink4.jpg";
 import InfoImgMain from "./components/infoImgMain";
 import CardComida from "./components/cardComida";
-import { Header, SectionDeliver, SectionMain, SectionOrganicFood } from "./App.style";
+import { Header, SectionDeliver, SectionDifferentMenu, SectionMain, SectionOrganicFood } from "./App.style";
 import BtnDeliver from "./components/BtnDeliver";
+import CardComidaMenu from "./components/cardComidaMenu";
+import BtnTypeMenu from "./components/BtnTypeMenu";
+import { useState } from "react";
 
 function App() {
+  const [numberImgMenu, setNumberImgMenu] = useState(1);
+
+  const menuSalada = [
+    {src: salada, price: "10.00", title: "Grill Vegetables"},
+    {src: salada2, price: "18.00", title: "Italian Pizza"},
+    {src: salada3, price: "12.00", title: "Chicken Strips"},
+    {src: salada4, price: "14.00", title: "Italian Pasta"}
+  ];
+
+  const MenuPizzas = [
+    {src: pizza1, price: "10.00", title: "Grill Vegetables"},
+    {src: pizza2, price: "18.00", title: "Italian Pizza"},
+    {src: pizza3, price: "12.00", title: "Chicken Strips"},
+    {src: pizza4, price: "14.00", title: "Italian Pasta"}
+  ];
+
+  const MenuDrinks = [
+    {src: drink, price: "10.00", title: "Grill Vegetables"},
+    {src: drink2, price: "18.00", title: "Italian Pizza"},
+    {src: drink3, price: "12.00", title: "Chicken Strips"},
+    {src: drink4, price: "14.00", title: "Italian Pasta"}
+  ];
+
+  const imgsMenu = [menuSalada, MenuPizzas, MenuDrinks]
+
   return (
     <>
       <Header>
@@ -41,7 +77,7 @@ function App() {
               <IoMdSearch className="iconeInputLabel"/>
             </button>
           </label>
-          <ButtonPrimary fontSize="1rem" background="#FCA039" width="40%"  text="Ordew now"/>
+          <ButtonPrimary fontSize="1rem" background="#FCA039" width="42%"  text="Ordew now"/>
         </div>
       </Header>
       <SectionMain>
@@ -132,6 +168,28 @@ function App() {
           </div>
         </div>
       </SectionDeliver>
+      <SectionDifferentMenu>
+        <h2>We Offer You <br /> Different Teste</h2>
+        <div className="containerConteudoDifferentMenu">
+          <div className="selectMenu">
+            <div className="ContainerBtnTypeMenu">
+              <BtnTypeMenu src={`${pizza1}`} text="Pizzas" action={ () => setNumberImgMenu(1)}/>
+              <BtnTypeMenu src={`${salada}`} text="Salads" action={ () => setNumberImgMenu(0)}/>
+              <BtnTypeMenu src={`${drink}`} text="Drinks" action={ () => setNumberImgMenu(2)}/>
+              <BtnTypeMenu src={`${salada}`} text="Salads" action={ () => setNumberImgMenu(0)}/>
+              <BtnTypeMenu src={`${pizza1}`} text="Pizzas" action={ () => setNumberImgMenu(1)}/>
+              <BtnTypeMenu src={`${drink}`} text="Drinks" action={ () => setNumberImgMenu(2)}/>
+            </div>
+          </div>
+          <div className="containerCadsMenu">
+            {imgsMenu[numberImgMenu].map((item, i) => {
+              return (
+                <CardComidaMenu  src={`${item.src}`} price={item.price} title={item.title} key={i}/>
+              )
+            })}
+          </div>
+        </div>
+      </SectionDifferentMenu>
     </>
   )
 }

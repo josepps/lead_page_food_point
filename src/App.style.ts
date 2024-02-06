@@ -322,7 +322,7 @@ export const SectionOrganicFood = styled.section`
 `;
 
 export const SectionDeliver = styled.section`
-    height: 80vh;
+    height: 70vh;
     display: flex;
 
     .imagensDeliver {
@@ -371,7 +371,7 @@ export const SectionDeliver = styled.section`
         .paragrafoInfoDeliver {
             width: 62%;
             line-height: 26px;
-            margin-bottom: 55px;
+            margin-bottom: 52px;
         }
 
         .containerBtnDeliver {
@@ -382,10 +382,63 @@ export const SectionDeliver = styled.section`
         }
 
         .ContainerBtnDeliver2 {
-            padding-top: 60px;
+            padding-top: 55px;
             display: flex;
             gap: 25px;
         }
 
+    }
+`;
+
+export const SectionDifferentMenu = styled.section`
+    height: 95vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+
+    h2 {
+        font-size: 3.8rem;
+        margin-bottom: 65px;
+    }
+
+    .containerConteudoDifferentMenu {
+        display: flex;
+        gap: 35px;
+    }
+
+    .selectMenu {
+        width: 245px;
+        height: 350px;
+        background: #ECC194;
+        border-radius: 20px;
+        padding: 20px 45px 17px 30px;
+
+        .ContainerBtnTypeMenu {
+            width: 113%;
+            height: 100%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+
+            &::-webkit-scrollbar {
+                background: #F1E4D1;
+                width: 4px;
+                border-radius: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #FE9F39;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .containerCadsMenu {
+        width: 850px;
+        height: 390px;
+        display: flex;
+        gap: 65px;
+        flex-wrap: wrap;
     }
 `;
