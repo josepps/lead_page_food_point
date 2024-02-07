@@ -442,3 +442,54 @@ export const SectionDifferentMenu = styled.section`
         flex-wrap: wrap;
     }
 `;
+
+export const SectionFoodGallery = styled.section`
+    width: 100vw;
+    height: 70vh;
+    background: #1A1613;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .infoFoodGallery {
+        width: 35%;
+
+        h2 {
+            color: #F69C3D;
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: #fff;
+            width: 90%;
+            margin-bottom: 50px;
+        }
+
+        .containerBtnFoodGallery {
+            :nth-child(1) {
+                margin-right: 23px;
+            }
+
+            :nth-child(2) {
+                color: #fff;
+            }
+        }
+    }
+
+    .imgFoodGallery {
+        width: 45%;
+        height: 100%;
+        display: flex;
+
+        .Container1 {
+            margin-top: 40px;
+            width: 45%;
+        }
+
+        .Container2 {
+            margin-top: 80px;
+            margin-left: 20px;
+        }
+    }
+`

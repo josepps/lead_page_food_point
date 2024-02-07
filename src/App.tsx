@@ -22,11 +22,12 @@ import drink3 from "./imgs/drink3.jpg";
 import drink4 from "./imgs/drink4.jpg";
 import InfoImgMain from "./components/infoImgMain";
 import CardComida from "./components/cardComida";
-import { Header, SectionDeliver, SectionDifferentMenu, SectionMain, SectionOrganicFood } from "./App.style";
+import { Header, SectionDeliver, SectionDifferentMenu, SectionFoodGallery, SectionMain, SectionOrganicFood } from "./App.style";
 import BtnDeliver from "./components/BtnDeliver";
 import CardComidaMenu from "./components/cardComidaMenu";
 import BtnTypeMenu from "./components/BtnTypeMenu";
 import { useState } from "react";
+import CardFoodGallery from "./components/cardFoodGallery";
 
 function App() {
   const [numberImgMenu, setNumberImgMenu] = useState(1);
@@ -190,6 +191,26 @@ function App() {
           </div>
         </div>
       </SectionDifferentMenu>
+      <SectionFoodGallery>
+        <div className="infoFoodGallery">
+          <h2>Our Food Gallery</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ipsum nam odit cupiditate, aliquam reiciendis, id, inventore ducimus neque esse possimus nemo consectetur libero!</p>
+          <div className="containerBtnFoodGallery">
+            <ButtonPrimary fontSize="1.2rem" background="#FCA039" width="34%"  text="Ordew now"/>
+            <ButtonPrimary fontSize="1.2rem" background="transparent" width="34%"  text="Contact Us"/>
+          </div>
+        </div>
+        <div className="imgFoodGallery">
+          <div className="Container1">
+            <CardFoodGallery src={pizza3} title="Italian Pizza" price="18.00"/>
+            <CardFoodGallery src={hamburguer} title="America Burger" price="11.00"/>
+          </div>
+          <div className="Container2">
+            <CardFoodGallery src={drink} title="Milk Shake" price="10.00"/>
+            <CardFoodGallery src={salada2} title="Salad" price="14.00"/>
+          </div>
+        </div>
+      </SectionFoodGallery>
     </>
   )
 }
