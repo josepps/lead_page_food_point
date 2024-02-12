@@ -1,5 +1,5 @@
 import { IoMdSearch, IoIosPlay  } from "react-icons/io";
-import { FaStar, FaRegBell } from "react-icons/fa";
+import { FaStar, FaRegBell, FaArrowLeft, FaArrowRight, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import { FaRegFaceSmile } from "react-icons/fa6";
 import { BsCart, BsWatch } from "react-icons/bs";
 import ButtonPrimary from "./components/butonPrimary";
@@ -8,6 +8,7 @@ import pessoa2 from "./imgs/pessoa4.jpg";
 import pessoa3 from "./imgs/pessoa3.jpg";
 import arrozCFrango from "./imgs/arrozComFrango.jpg";
 import hamburguer from "./imgs/hamburguer.jpg";
+import hamburguerPng from "./imgs/hamburguerPng.png";
 import salada from "./imgs/salada.png";
 import salada2 from "./imgs/salada2.jpg";
 import salada3 from "./imgs/salada3.jpg";
@@ -26,16 +27,20 @@ import chef3 from "./imgs/chef3.jpg";
 import chef4 from "./imgs/chef4.jpg";
 import InfoImgMain from "./components/infoImgMain";
 import CardComida from "./components/cardComida";
-import { Header, SectionDeliver, SectionDifferentMenu, SectionFoodGallery, SectionMain, SectionOrganicFood, SectionOurTeam } from "./App.style";
+import { Footer, Header, SectionCustomerReviews, SectionDeliver, SectionDifferentMenu, SectionFoodGallery, SectionMain, SectionOrganicFood, SectionOurTeam } from "./App.style";
 import BtnDeliver from "./components/BtnDeliver";
 import CardComidaMenu from "./components/cardComidaMenu";
 import BtnTypeMenu from "./components/BtnTypeMenu";
 import { useState } from "react";
 import CardFoodGallery from "./components/cardFoodGallery";
 import CardOurTeam from "./components/cardOurTeam";
+import CardCustomerRevew from "./components/CardCustomerRevew";
+import Logo from "./components/logo";
 
 function App() {
   const [numberImgMenu, setNumberImgMenu] = useState(1);
+  const [numberImgCustomer, setNumberImgCustomer] = useState(0);
+
 
   const menuSalada = [
     {src: salada, price: "10.00", title: "Grill Vegetables"},
@@ -60,13 +65,30 @@ function App() {
 
   const imgsMenu = [menuSalada, MenuPizzas, MenuDrinks]
 
+  const passarImgCustomer = () => {
+    if (numberImgCustomer < 3 ) {
+      setNumberImgCustomer(numberImgCustomer+1)
+    }
+    else {
+      setNumberImgCustomer(0)
+    }
+  };
+
+  const voltarImgCustomer = () => {
+    if (numberImgCustomer >= 1 ) {
+      setNumberImgCustomer(numberImgCustomer-1)
+    }
+    else {
+      setNumberImgCustomer(3)
+    }
+  };
+
+  console.log(numberImgCustomer)
+
   return (
     <>
       <Header>
-        <a href="#" className="logoHeader">
-          <div className="containerLogo"></div>
-          <h2 className="tituloLogo">Food Point</h2>
-        </a>
+        <Logo />
         <nav className="navHeader">
           <ul className="ulHeader">
             <li><a href="">Home</a></li>
@@ -225,6 +247,41 @@ function App() {
           <CardOurTeam src={chef4} title="Jane Kopper" subTitle="Senior Chef" />
         </div>
       </SectionOurTeam>
+      <SectionCustomerReviews>
+        <img src={hamburguerPng} alt="" />
+        <div className="contianerCarrocelCustomerReview">
+          <h2>Our Customer reviews</h2>
+          <div className="ContainerTransparente">
+            <div className={`carrocelCustomerRevew Img${numberImgCustomer}`} >
+              <CardCustomerRevew src={pessoa1} nome="Alex Hales"/>
+              <CardCustomerRevew src={pessoa2} nome="Tim David"/>
+              <CardCustomerRevew src={pessoa3} nome="Hales Alex"/>
+              <CardCustomerRevew src={pessoa1} nome="David Tim"/>
+            </div>
+          </div>
+          <div className="containerBtnCustomer">
+            <button onClick={voltarImgCustomer}><FaArrowLeft /></button>
+            <button onClick={passarImgCustomer}><FaArrowRight /></button>
+          </div>
+        </div>
+      </SectionCustomerReviews>
+      <Footer>
+        <Logo />
+        <nav className="navHeader">
+          <ul className="ulHeader">
+            <li><a href="">Home</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="">Service</a></li>
+            <li><a href="">Delivery</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+        <p className="icones">
+          <span><FaInstagram /></span>
+          <span><FaFacebook /></span>
+          <span><FaTwitter /></span>
+        </p>
+      </Footer>
     </>
   )
 }

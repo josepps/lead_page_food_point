@@ -8,54 +8,6 @@ export const Header = styled.header`
     justify-content: space-around;
     padding: 0 5%;
 
-    a {
-        text-decoration: none;
-    }
-
-    .logoHeader {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-        .containerLogo {
-            background: #FE9F39;
-            display: block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            position: relative;
-            top: -5px;
-            left: 0;
-
-            &::after, &::before {
-                content: "";
-                width: 12px;
-                height: 12px;
-                border-radius: 50%;
-                background: #FE9F39;
-            }
-
-            &::after {
-                position: absolute;
-                top: 13px;
-                left: 9px;
-            }
-
-            &::before {
-                position: absolute;
-                top: 13px;
-                left: -9px;
-            }
-        }
-
-        .tituloLogo {
-            margin-left: 11px;
-            color: #000;
-            font-size: 1.3rem;
-        }
-    }
-
     .navHeader {
         .ulHeader {
             display: flex;
@@ -496,7 +448,7 @@ export const SectionFoodGallery = styled.section`
 
 export const SectionOurTeam = styled.section`
     width: 100vw;
-    height: 50vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -511,4 +463,125 @@ export const SectionOurTeam = styled.section`
         display: flex;
         gap: 35px;
     }
+`;
+
+export const SectionCustomerReviews = styled.section`
+    width: 100vw;
+    height: 56vh;
+    display: flex;
+    justify-content: center;
+    margin-left: 80px;
+
+    img {
+        height: 350px;
+    }
+
+    .contianerCarrocelCustomerReview {
+        width: 50%;
+        height: 20%; 
+        margin-top: 15px;
+        margin-left: 100px;
+        position: relative;
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 35px;
+        }
+
+        .ContainerTransparente{
+            overflow: hidden;
+            position: absolute;
+        }
+        .carrocelCustomerRevew {
+            display: flex;
+            gap: 30px;
+        }
+
+        .Img1 {
+            margin-left: -380px;
+        }
+
+        .Img2 {
+            margin-left: -760px;
+        }
+
+        .Img3 {
+            margin-left: -1140px;
+        }
+
+        .containerBtnCustomer {
+            position: absolute;
+            top: 320px;
+            display: flex;
+            gap: 15px;
+            
+            button {
+                background: none;
+                padding: 8px;
+                border-radius: 50%;
+                border: 2px solid #000;
+                font-size: 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: all 0.3s;
+
+                &:hover {
+                    background: #000;
+                    color: #01FFFF;
+                }
+            }
+        }
+    }
+`;
+
+export const Footer = styled.footer`
+    width: 100vw;
+    height: 15vh;
+    background: #151515;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    h2 {
+        color: #fff !important;
+    }
+
+    .navHeader {
+        .ulHeader {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style-type: none;
+            gap: 25px;
+            
+            li a{
+                color: #9B9B9B;
+                font-weight: 500;
+                padding-bottom: 5px;
+
+                &:hover {
+                    color: #df801a;
+                    border-bottom: 1px solid #df801a;
+                }
+            }
+        }
+    }
+
+    .icones {
+            margin-top: 10px;
+            
+            span {
+                margin: 0 8px;
+                color: #FCA039;
+                font-size: 1.5rem;
+                cursor: pointer;
+
+                &:hover {
+                    scale: 1.5;
+                    font-size: 1.8rem;
+                }
+            }
+        }
 `;

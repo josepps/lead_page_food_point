@@ -11,3 +11,7 @@ body {
   background: #01FFFF;
   overflow-x: hidden;
 }
+
+a {
+  text-decoration: none;
+}
