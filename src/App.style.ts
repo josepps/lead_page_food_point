@@ -493,3 +493,22 @@ export const SectionFoodGallery = styled.section`
         }
     }
 `
+
+export const SectionOurTeam = styled.section`
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    .containerCardOurTeam {
+        margin: 35px 0;
+        display: flex;
+        gap: 35px;
+    }
+`;

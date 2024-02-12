@@ -20,14 +20,19 @@ import drink from "./imgs/drink.jpg";
 import drink2 from "./imgs/drink2.jpg";
 import drink3 from "./imgs/drink3.jpg";
 import drink4 from "./imgs/drink4.jpg";
+import chef1 from "./imgs/chef1.jpg";
+import chef2 from "./imgs/chef2.jpg";
+import chef3 from "./imgs/chef3.jpg";
+import chef4 from "./imgs/chef4.jpg";
 import InfoImgMain from "./components/infoImgMain";
 import CardComida from "./components/cardComida";
-import { Header, SectionDeliver, SectionDifferentMenu, SectionFoodGallery, SectionMain, SectionOrganicFood } from "./App.style";
+import { Header, SectionDeliver, SectionDifferentMenu, SectionFoodGallery, SectionMain, SectionOrganicFood, SectionOurTeam } from "./App.style";
 import BtnDeliver from "./components/BtnDeliver";
 import CardComidaMenu from "./components/cardComidaMenu";
 import BtnTypeMenu from "./components/BtnTypeMenu";
 import { useState } from "react";
 import CardFoodGallery from "./components/cardFoodGallery";
+import CardOurTeam from "./components/cardOurTeam";
 
 function App() {
   const [numberImgMenu, setNumberImgMenu] = useState(1);
@@ -211,6 +216,15 @@ function App() {
           </div>
         </div>
       </SectionFoodGallery>
+      <SectionOurTeam>
+        <h2>Our Team</h2>
+        <div className="containerCardOurTeam">
+          <CardOurTeam src={chef1} title="Dewald Brevis" subTitle="Senior Chef" />
+          <CardOurTeam src={chef2} title="Jane Maker" subTitle="chef" />
+          <CardOurTeam src={chef3} title="Billy Taylor" subTitle="Senior Chef" />
+          <CardOurTeam src={chef4} title="Jane Kopper" subTitle="Senior Chef" />
+        </div>
+      </SectionOurTeam>
     </>
   )
 }
